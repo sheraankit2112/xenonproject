@@ -40,6 +40,7 @@ def loginpage(request):
     if request.method=="POST":
         fm=loginform(request.POST)
         if fm.is_valid():
+            global username
             username=fm.cleaned_data["username"]
             password=fm.cleaned_data["password"]
             user=authenticate(username=username,password=password)
@@ -50,4 +51,9 @@ def loginpage(request):
     return render(request,"login.html",{"form":fm})
 
 def afterlogin(request):
+    ob=userbio.objects.filter(username=username)
     return render(request,"afterlogin.html")
+
+def logoutp(request):
+    logout(request)
+    return redirect("/")
