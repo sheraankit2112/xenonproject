@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <style>
+        .errors{
+            font-size: 1.5rem;
+            color:red;
+        }
+        .success{
+            color:white;
+            background-color: green;
+            text-align: center;
+            margin-left:40rem;
+            margin-top:5rem;
+            font-size:2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <div class="login">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="form">
+            <form action=" " method="post">
+                {% csrf_token %}
+                {% for i in form %}
+                {{i}}{% if i.errors %}<br><span class="errors">{{i.errors|striptags}}</span>><br>{% endif %}<br><br>
+                {% endfor %}
+                {% if form.non_field_errors %}<br>
+                <span class="errors">{{form.non_field_errors|striptags}}</span><br>
+                {% endif %}<br><br>
+                <input type="submit" value="login"><br><br>
+                <p>Don't Have an Account? <a href="{% url 'signup' %}">Sign Up</a></p>
+        </div>
+
+            </form>
+            
+        
+    </div>
+</body>
+</html>

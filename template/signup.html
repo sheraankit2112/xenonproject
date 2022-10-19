@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/signup.css">
+    <style>
+        .errors{
+            font-size: 1.5rem;
+            color:red;
+        }
+        .success{
+            color:white;
+            background-color: green;
+            margin-left:40rem;
+            margin-top:5rem;
+            font-size:2rem;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <div class="signup">
+            <h1>SIGN UP</h1>
+        </div>
+        <div class="form">
+            <form action=" " method="post">
+                {% csrf_token %}
+
+                {% for i in form %}
+                {{i}}{% if i.errors %}<br><span class="errors">{{i.errors|striptags}}</span>><br>{% endif %}<br><br>
+                {% endfor %}
+                {% if form.non_field_errors %}<br>
+                <span class="errors">{{form.non_field_errors|striptags}}</span><br>
+                {% endif %}
+                <br><br><br>
+                
+
+                <input type="submit" value="login"><br><br>
+                <p>Already Have an Account? <a href="./login.html">Login</a></p>
+        
+
+            </form>
+        </div>
+            
+        
+    </div>
+</body>
+</html>

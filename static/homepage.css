@@ -1,0 +1,138 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body{
+    background-color: black;
+    background: linear-gradient(rgb(30, 29, 29),rgba(30,29,29));
+}
+.header{
+    height:20rem;
+    width:100%;
+    
+}
+.nav{
+    height:100%;
+    width:90%;
+    
+    margin:0 auto;
+}
+.login,.logo,.signup{
+    float:left;
+    
+    height:100%;
+    width:33.33%;
+
+}
+.logo img{
+    height:20rem;
+    width:45rem;
+}
+.button{
+    color:black;
+    padding-top:2rem;
+    padding-right:6rem;
+    padding-left:6rem;
+    padding-bottom:2rem;
+    background-color: rgb(197, 184, 178);
+    font-size: 3rem;
+    text-decoration: None;
+    font-weight:800 ;
+    border:6px solid rgb(231, 239, 8);
+    border-radius: 3rem;
+    
+    
+}
+.button:hover{
+    background-color: rgb(168, 72, 72);
+}
+.login,.signup{
+    text-align: center;
+    padding:8rem;
+}
+.headline{
+    text-align: center;
+}
+.headline h1{
+    font-size:4rem;
+    color:white;
+    word-spacing: 1rem;
+
+    
+}
+.shera{
+    color:yellow;
+    font-size:4rem;
+}
+.contactpage{
+    height:45rem;
+    
+}
+.forms{
+    height:100%;
+    width:120rem;
+    margin:0 auto;
+}
+.forms .contact{
+    width:40%;
+    
+    height:100%;
+    padding:8rem;
+    float:left;
+    
+
+}
+.details{
+    margin-top:4rem;
+}
+.details h1{
+    color:rgb(253, 220, 3);
+    font-size:4rem;
+    font-weight: bold;
+
+}
+.details p{
+    color:white;
+    font-size:2rem;
+}
+.formpage{
+    height:100%;
+    float:right;
+    width:60%;
+  
+}
+.formpage form{
+   
+    width:70%;
+    height:100%;
+    margin:0 auto;
+    padding:3rem;
+    color:white;
+    text-align: center;
+    
+}
+form label{
+    
+    font-size:1.5rem;
+}
+form input{
+    margin-top:0.8rem;
+    color:black;
+    height:3rem;
+    width:40rem;
+}
+form input[name=message]{
+    height:8rem;
+    width:40rem;
+}
+form input[type=submit]{
+    height:3rem;
+    width:6rem;
+    background-color: yellow;
+    color:black;
+    font-size:1.2rem;
+    font-weight: 700;
+}
