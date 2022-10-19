@@ -52,7 +52,7 @@ def loginpage(request):
 
 def afterlogin(request):
     ob=userbio.objects.filter(username=username)
-    return render(request,"afterlogin.html")
+    return render(request,"afterlogin.html",{"ob":ob})
 
 def logoutp(request):
     logout(request)
