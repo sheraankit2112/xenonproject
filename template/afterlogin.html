@@ -23,12 +23,9 @@
     <small {% if i.tags %} class="{{i.tags}}" {% endif %}>{{i}}</small>
     {% endfor %}
     {% endif %}
-    <a style="font-size:2rem; background-color: red; color:white padding:1rem 4rem"href="{% url 'logout' %}">LOGOUT</a>
-    {% for i in ob %}
-    <p style="font-size:2rem; color:white;">NAME</p><span style="color:yellow; font-size:2rem;">{{i.name}}</span><br><br>
-    <p style="font-size:2rem; color:white;">MOBILE NUMBER:</p><span style="color:yellow; font-size:2rem;">{{i.mobile}}</span><br><br>
-    <p style="font-size:2rem; color:white;">Email:</p><span style="color:yellow; font-size:2rem;">{{i.email}}</span>
-    {% endfor %}
+    <a style="font-size:2rem; background-color: red; color:white padding:1rem 4rem"href="{% url 'logout' %}">LOGOUT</a><br><br>
+    <p style="font-size:2rem; color:white;">HELLO EVERYONE</p>
+    
 
 </body>
 </html>
